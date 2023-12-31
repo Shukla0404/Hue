@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huehuehuehuehue</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f6f6f6;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #4caf50;
+            padding: 20px;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #4caf50;
+            padding: 10px;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .fadeIn {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .heart:hover {
+            animation: heartbeat 0.6s infinite;
+        }
+
+        .sticker {
+            max-width: 100%;
+            height: auto;
+            display: none;
+            margin-top: 20px;
+        }
+
+        /* Button Styles */
+        .love-button, .no-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+
+        .love-button {
+            background-color: #e91e63;
+            border: none;
+        }
+
+        .love-button:hover {
+            background-color: #c2185b;
+        }
+
+        .no-button {
+            background-color: #ff5722;
+            border: none;
+        }
+
+        .no-button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="fadeIn" onclick="showHeartAlert()">
+        <h1 class="heart">Happy New Year, Nonu <3</h1>
+    </header>
+
+    <section class="fadeIn">
+        <p>As we enter the new year, I just wanted to say how much you mean to me. This past year had its ups and downs, but one thing that never changed is my love and care for you. We've been through a lot together, and I want you to know that I'm not going anywhere.
+            Let's leave behind the tough times and focus on making this new year better. I believe in us and our ability to improve together. No matter what happens, I'll be right by your side, supporting you and loving you. We can achieve our dreams together; I know we've got what it takes.     
+            We fight together, we cry together, we laugh together, and we will share this bond of together for forver and ever<3. We both need to improve a lot. I know you, you know me. What else we need?
+            I will stick with you forever. Sometimes it may happen that we mighht fight a lot but it will never change the fact that I love you so much. [PLEASE YAAAR SHK MT KIA KR MAI KUCH NHI KRTA TO BE VERY HONEST cry emo cry emo]
+            Here's to a new year full of love, happiness, and growing stronger as a couple. I'm excited about what the future holds for us. Let's stick together and make our dreams a reality.
+            Love you always,</p>
+        <p>Thank you for being an amazing part of my life.</p>
+        <p>Do you love me?</p>
+        <button class="love-button" onclick="showAnimatedSticker('https://media.tenor.com/q33Nb2p64FIAAAAi/love.gif')">Yes</button>
+        <button class="no-button" onclick="showAnimatedSticker('https://media1.tenor.com/m/EEAIa4EiExoAAAAC/no-cat.gif')">No</button>
+        <img id="animated-sticker" class="sticker" src="" alt="Animated Sticker">
+    </section>
+
+    
+
+    <script>
+        function showHeartAlert() {
+            // Display an alert when the header is clicked
+            alert("You touched my heart ❤️");
+        }
+        function showAnimatedSticker(gifUrl) {
+            // Show the animated sticker
+            var animatedSticker = document.getElementById('animated-sticker');
+            animatedSticker.src = gifUrl;
+            animatedSticker.style.display = 'block';
+
+            // Optional: You can hide the buttons after showing the sticker
+            document.querySelector('.love-button').style.display = 'none';
+            document.querySelector('.no-button').style.display = 'none';
+
+            // Hide the animated sticker after 5 seconds
+            setTimeout(function() {
+                animatedSticker.style.display = 'none';
+
+                // Optional: Show the buttons again after hiding the sticker
+                document.querySelector('.love-button').style.display = 'inline-block';
+                document.querySelector('.no-button').style.display = 'inline-block';
+            }, 5000);
+        }
+    </script>
+
+</body>
+</html>
